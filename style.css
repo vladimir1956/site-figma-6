@@ -1,0 +1,10 @@
+.header__left{
+    grid-column: 2 span;
+}
+.header__right{
+    grid-column: 10 span;
+}
+.nav__list{
+    display: flex;
+    align-items: center;
+}
