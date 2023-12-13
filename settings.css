@@ -34,7 +34,20 @@ html {
     background: transparent;
     cursor: pointer;
   }
-  
+  .btn{
+    padding: 22px 47px;
+    border-radius: 4px;
+    font: 400 16px / 140% var(--font-family);
+    transition:  color 0.3s ease-in-out, 
+          background-color 0.3s ease-in-out;
+  }
+  .btn--primary{
+    color: white;
+    background-color: #CC4949;
+  }
+  .btn--primary:hover{
+    background-color:  #F14F4F;
+  }
   .container {
     margin: 0 auto;
     padding: 0 15px;

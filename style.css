@@ -1,14 +1,37 @@
 :root {
     --grid-gap:20px;
-    --font-family: "Intro", sant-serif;
+    --font-family: "Intro-Book", sant-serif;
     --middle-hight-font: 700 30px / 140% var(--font-family);
     --small-font: 400 14px / 140% var(--font-family);
+}
+@font-face {
+    font-family: "Intro-Book";
+    src: url("./font/Intro-Book.woff2") format('woff2');
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
 }
 .header{
     position: fixed;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 100%;  
+    z-index: 100;
+}
+.header__container {
+    position: relative;
+    align-items: center;
+    padding: 15px 15px;
+}
+.header__container::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: calc(100% - (15px*2));
+    height: 100%;
+    border-bottom: 1px solid  rgba(255, 255, 255, 0.50);  
+    transform: translateX(-50%); 
 }
 .header__left{
     grid-column: 2 span;
@@ -27,7 +50,7 @@
 }
 .nav__link{
     color:#fff;
-    font: var(--small-font);
+    font: var(--font-family);
 }
 .cart{
     margin-left: 40px;
@@ -43,11 +66,22 @@
     object-fit: cover;
 }
 .hero{
-    height: 800px;
+    position: relative;
+    padding: 100px 0px;
+    height: 528px;
     background-color: #484283;
+}
+.hero__container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content:center;
+    z-index: 5;
 }
 .logo {
     color: #FFF;
+    line-height: 1;
     font: var(--middle-hight-font);
 }
 .header__cart {
@@ -73,16 +107,35 @@
     font: var(--small-font);
     background-color: #F14F4F;
 }
-.hero {
-}
-.header__container {
-    align-items: center;
-}
 .hero__bg-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: 70px;
+    margin-left: 50px;
+    z-index: 0;
+    color: rgba(255, 255, 255, 0.12);
+    font-family: Intro Bold;
+    font-size: 200px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    transform: translate(-50%, -50%);
 }
 .hero__title {
+    margin: 0;
+    margin-top: 50px;
+    max-width: 580px;
+    font: 700 36px / 140% var(--font-family);
+    margin-bottom: 20px;
+    color: #FFF;
 }
 .hero__descr {
+    font-size: 16px;
+    margin-bottom:40px ;
+    max-width: calc(50% - 100px);
+    font: var(--font-family);
+    color: #FFF;
 }
 .btn {
 }
