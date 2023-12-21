@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>New site</title>
+  <link rel="stylesheet" href="settings.css">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="about.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=Your API key&lang=en_US" type="text/javascript">
+</script>
+  <script src="js/map.js"></script>
+</head>
+<style>
+.contacts {
+    padding: 40px 0px;
+}
+.container {
+}
+.contacts__container {
+    display: flex;
+    justify-content: space-around;
+}
+.contacts__title {
+    margin-bottom: 40px;
+    color: #444B58;
+    font-family: Intro Bold;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.title {
+}
+.contacts__item {
+    margin-bottom: 20px;
+}
+.contacts__subtitle {
+    margin: 0;
+    margin-bottom: 20px;
+    color: #B2B5BB;
+    font-family: Intro Book;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 19.6px */
+    letter-spacing: 1.12px;
+    text-transform: uppercase;
+}
+.contacts__phone {
+    display: inline-block;
+    color: #444B58;
+    font-family: Intro Regular;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 42px */
+}
+.contacts__address {
+    display: block;
+}
+.social {
+    display: flex;
+    gap: 30px;
+}
+.social__item {
+   
+}
+.social__link {
+    width: 44px;
+    height: 44px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.social__link--fb {
+    background-image: url('./img/VK.svg');
+}
+.social__link--insta {
+    background-image: url('./img/Instagram.svg');
+}
+.comtact__map {
+    width: 680px;
+    height: 500px;
+}
+    </style>
+    <body>
+        <section class="contacts">
+            <div class="container contacts__container">
+                <div class="contacts__title">
+                    <h2 class="title contacts__title">Contakts</h2>
+                
+                <address class="contacts__item">
+                    <h3 class="contacts__subtitle">Offis</h3>
+                    <a href="" class="contacts__phone">+37129419440</a>
+                    <span class="contacts__address">
+                        Jurmala O.Kalpaka 27
+                    </span>
+                </address>
+                <address class="contacts__item">
+                    <h3 class="contacts__subtitle">Holl</h3>
+                    <a href="" class="contacts__phone">+37129419440</a>
+                    <span class="contacts__address">
+                        Jurmala O.Kalpaka 27
+                    </span>
+                </address>
+                <ul class="social list-reset">
+                    <li class="social__item"><img src="./img/VK.svg" alt=""></li>
+                    <li class="social__item"><img src="./img/Instagram.svg" alt=""></li>
+                </ul>
+            </div>
+                <div class="comtact__map">
+                    <div id="map" style="width: 600px; height: 400px"></div>
+                </div>
+            </div>
+        </section>
+        
+    </body>
+    </html>

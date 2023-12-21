@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>New site</title>
+  <link rel="stylesheet" href="settings.css">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="">
+</head>
+<style>
+    .task{
+        margin: 0 auto;
+    }
+    .tooltip{
+        position: relative;
+       text-align: center;
+    }
+    .tooltip::after{
+        content:attr(data-text);
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        background-color: black;
+        padding: 10px;
+        border-radius: 4px;
+        color: azure;
+    /*    opacity: 0;
+        visibility: hidden;*/
+        cursor: pointer;
+        transform: translateX(-50%);
+    }
+    .tooltip:hover::after{
+        opacity: 1;
+        visibility: visible;
+    }
+    .tooltip::before{
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 7.5px 10px 7.5px;
+        border-color: transparent transparent #333 transparent;
+        transform: translateX(-50%);
+     }
+</style>
+<body>
+    <div class="task">
+        <div class="tooltip" data-text="Text after button many words">
+            <img src="./img/Instagram.svg" alt="" class="tooltip__img">
+        </div>
+    </div>
+</body>
+</html>
